@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
 }
 .container{
@@ -44,14 +44,14 @@ body{
 
 .panel.active h3{
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media (max-width: 480px) {
+@media only screen and  (max-width: 480px) {
     .container{
         width: 100vw;
     }
-
-    .panel:nth-of-type(4),.panel:nth-of-type(5) {
+    .panel.hide{
         display: none;
     }
 }
